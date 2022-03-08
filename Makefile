@@ -1,7 +1,7 @@
 #!make -f
 
 CXX=clang++-9 
-CXXFLAGS=-std=c++2a -Werror
+CXXFLAGS=-std=c++2a -Werror 
 
 HEADERS=mat.hpp
 OBJECTS=mat.o
