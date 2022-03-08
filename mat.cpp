@@ -4,7 +4,7 @@
 
 string create_c1_line(char c1, char c2, int columns, int k)
 {
-    string result = "";
+    string result;
 
     // add alternating left side
     for (int i = 0; i < k; ++i)
@@ -41,7 +41,7 @@ string create_c1_line(char c1, char c2, int columns, int k)
 
 string create_c2_line(char c1, char c2, int columns, int k)
 {
-    string result = "";
+    string result;
 
     // add alternating left side
     for (int i = 0; i < k; ++i)
@@ -86,7 +86,7 @@ string ariel::mat(int columns, int rows, char c1 = '@', char c2 = '-')
         throw std::invalid_argument("'columns' must be a positive odd number");
     }
 
-    string result = "";
+    string result;
     int mid = (rows / 2) + 1;
 
     for (int i = 0; i < mid; ++i)
