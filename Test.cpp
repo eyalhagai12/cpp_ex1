@@ -51,7 +51,7 @@ TEST_CASE("Good input")
     000
     */
 
-    CHECK(nospaces(mat(5, 5, '1', '2')) == nospaces("11111\n12221\n12121\b12221\n11111"));
+    CHECK(nospaces(mat(5, 5, '1', '2')) == nospaces("11111\n12221\n12121\n12221\n11111"));
     /* 3
     11111
     12221
@@ -87,7 +87,7 @@ TEST_CASE("Good input")
     RRRRRRR
     */
 
-    CHECK(nospaces(mat(3, 9, 'D', 'x')) == nospaces("DDD\nDxD]nDxD\nDxD\nDxD\nDxD\nDxD\nDxD\nDDD"));
+    CHECK(nospaces(mat(3, 9, 'D', 'x')) == nospaces("DDD\nDxD\nDxD\nDxD\nDxD\nDxD\nDxD\nDxD\nDDD"));
     /* 7
      DDD
      DxD

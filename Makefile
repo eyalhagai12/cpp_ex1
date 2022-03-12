@@ -16,11 +16,15 @@ demo: Demo.o $(OBJECTS)
 test: TestCounter.o Test.o $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $^ -o test
 
+app: app.o $(OBJECTS)
+	$(CXX) $(CXXFLAGS) $^ -o app
+	./app
+
 tidy:
 	clang-tidy $(SOURCES) -checks=bugprone-*,clang-analyzer-*,cppcoreguidelines-*,performance-*,portability-*,readability-* --warnings-as-errors=-* --
 
 %.o: %.cpp $(HEADERS)
-	$(CXX) $(CXXFLAGS) --compile $< -o $@
+	$(CXX) -g -fPIE $(CXXFLAGS) --compile $< -o $@
 
 clean:
-	rm -f *.o demo test
+	rm -f *.o demo test app
